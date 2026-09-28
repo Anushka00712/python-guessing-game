@@ -1,16 +1,13 @@
 # python-guessing-game
 My first Python project: a number guessing game
 
-## How it works
+## Features
 
+- Generates a random number between 1 and 100
+- Tells you whether your guess is too high or too low
+- Counts the number of guesses
+- Handles invalid input
 
-The program randomly generates a number between 1 and 100.
-The player keeps guessing until they find the correct number.
-
-After each guess, the game tells the player whether their guess was
-too high or too low.
-
-The game also keeps track of how many guesses were made.
 
 ## What I learned
 
@@ -21,10 +18,10 @@ The game also keeps track of how many guesses were made.
 - Type conversion
 - The `random` module
 - f-strings
+- Handling invalid user input with `try` and `except`
 
 ## Future Improvements
 
 - Add difficulty levels
-- Add input validation
 - Add a limited number of guesses
 - Add a replay option
