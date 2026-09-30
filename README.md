@@ -3,7 +3,8 @@ My first Python project: a number guessing game
 
 ## Features
 
-- Generates a random number between 1 and 100
+- Generates a random number based on difficulty
+- Easy, Medium, and Hard difficulty levels
 - Tells you whether your guess is too high or too low
 - Counts the number of guesses
 - Handles invalid input
@@ -19,9 +20,10 @@ My first Python project: a number guessing game
 - The `random` module
 - f-strings
 - Handling invalid user input with `try` and `except`
+- Function parameters
+- Refactoring repeated code
 
 ## Future Improvements
 
-- Add difficulty levels
 - Add a limited number of guesses
 - Add a replay option
