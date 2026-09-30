@@ -8,6 +8,7 @@ My first Python project: a number guessing game
 - Tells you whether your guess is too high or too low
 - Counts the number of guesses
 - Handles invalid input
+- Limited number of guesses based on difficulty
 
 
 ## What I learned
@@ -22,6 +23,7 @@ My first Python project: a number guessing game
 - Handling invalid user input with `try` and `except`
 - Function parameters
 - Refactoring repeated code
+- Using counters and conditions to limit attempts
 
 ## Future Improvements
 
