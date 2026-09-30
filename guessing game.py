@@ -5,12 +5,12 @@ print("Welcome to my Guessing Game!!")
 print("1. Easy (range 1-20)")
 print("2. Medium (range 1-50)")
 print("3. Hard (range 1-100)")
-
 diff = input("Select a difficulty level: ").title()
 
-def game(max_num):
+def game(max_num,max_guesses):
     num = rand.randint(1,max_num)
     count = 0
+    won = False
 
     while True:
         try:
@@ -33,15 +33,21 @@ def game(max_num):
         else:
             print("Correct!!")
             count +=1
+            won = True
             break
 
-    print(f"You got it in {count} guesses")
+        if count>=max_guesses:
+            print("You have run out of guesses :(")
+            break
+
+    if won:
+        print(f"You got it in {count} guesses")
 
 if diff == "1" or diff == "Easy":
-    game(20)
+    game(20,5)
 elif diff == "2" or diff == "Medium":
-    game(50)
+    game(50,6)
 elif diff == "3" or diff == "Hard":
-    game(100)
+    game(100,8)
 else:
     print("Invalid difficulty level")
