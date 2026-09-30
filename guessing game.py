@@ -1,14 +1,17 @@
-import random as rand
+import random
 
-print("Welcome to my Guessing Game!!")
+def main_menu():
+    print("Welcome to my Guessing Game!!")
 
-print("1. Easy (range 1-20)")
-print("2. Medium (range 1-50)")
-print("3. Hard (range 1-100)")
-diff = input("Select a difficulty level: ").title()
+    print("1. Easy (range 1-20)")
+    print("2. Medium (range 1-50)")
+    print("3. Hard (range 1-100)")
+    diff = input("Select a difficulty level: ").title()
+
+    return diff
 
 def game(max_num,max_guesses):
-    num = rand.randint(1,max_num)
+    num = random.randint(1,max_num)
     count = 0
     won = False
 
@@ -41,13 +44,32 @@ def game(max_num,max_guesses):
             break
 
     if won:
-        print(f"You got it in {count} guesses")
+        print(f"You got it in {count} guesses!!")
 
-if diff == "1" or diff == "Easy":
-    game(20,5)
-elif diff == "2" or diff == "Medium":
-    game(50,6)
-elif diff == "3" or diff == "Hard":
-    game(100,8)
-else:
-    print("Invalid difficulty level")
+def replay():
+    answer = input("Would you like to play again? (y/n): ").lower()
+
+    if answer == "y":
+        return True
+    else:
+        return False
+
+while True:
+
+    diff = main_menu()
+
+    if diff == "1" or diff == "Easy":
+        game(20,5)
+    elif diff == "2" or diff == "Medium":
+        game(50,6)
+    elif diff == "3" or diff == "Hard":
+        game(100,8)
+    else:
+        print("Invalid difficulty level")
+        continue
+
+    if replay():
+        continue
+    else:
+        print("Thank you for playing!!")
+        break
