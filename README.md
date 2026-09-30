@@ -27,5 +27,4 @@ My first Python project: a number guessing game
 
 ## Future Improvements
 
-- Add a limited number of guesses
 - Add a replay option
