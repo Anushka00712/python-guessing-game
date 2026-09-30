@@ -9,6 +9,7 @@ My first Python project: a number guessing game
 - Counts the number of guesses
 - Handles invalid input
 - Limited number of guesses based on difficulty
+- Add replay functionality
 
 
 ## What I learned
@@ -24,7 +25,3 @@ My first Python project: a number guessing game
 - Function parameters
 - Refactoring repeated code
 - Using counters and conditions to limit attempts
-
-## Future Improvements
-
-- Add a replay option
