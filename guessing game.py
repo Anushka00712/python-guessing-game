@@ -41,18 +41,22 @@ def game(max_num,max_guesses):
 
         if count>=max_guesses:
             print("You have run out of guesses :(")
+            print(f"The number was {num}!")
             break
 
     if won:
         print(f"You got it in {count} guesses!!")
 
 def replay():
-    answer = input("Would you like to play again? (y/n): ").lower()
+    while True:
+        answer = input("Would you like to play again? (y/n): ").lower().strip()
 
-    if answer == "y":
-        return True
-    else:
-        return False
+        if answer == "y":
+            return True
+        elif answer == "n":
+            return False
+        else:
+            print("Please put valid input y/n")
 
 while True:
 
