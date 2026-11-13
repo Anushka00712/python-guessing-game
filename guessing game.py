@@ -10,6 +10,18 @@ def main_menu():
 
     return diff
 
+def give_hint(guess, num):
+    difference = abs(guess - num)
+
+    if difference <= 3:
+        print("Very Close!")
+    elif difference <= 7:
+        print("Close!")
+    elif difference <= 15:
+        print("Far away!")
+    else:
+        print("Very Far!")
+
 def game(max_num,max_guesses):
     num = random.randint(1,max_num)
     count = 0
@@ -27,12 +39,16 @@ def game(max_num,max_guesses):
             print("Please enter a number")
             continue
 
-        if guess>num:
-            print("Too High")
-            count +=1
-        elif guess<num:
-            print("Too Low")
-            count+=1
+        if guess > num:
+            print("Guess Lower")
+            give_hint(guess, num)
+            count += 1
+
+        elif guess < num:
+            print("Guess Higher")
+            give_hint(guess, num)
+            count += 1
+       
         else:
             print("Correct!!")
             count +=1
