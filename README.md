@@ -5,7 +5,7 @@ My first Python project: a number guessing game
 
 - Generates a random number based on difficulty
 - Easy, Medium, and Hard difficulty levels
-- Tells you whether your guess is too high or too low
+- Tells you whether your guess is higher or lower and how close you are to guessing the number
 - Counts the number of guesses
 - Handles invalid input
 - Limited number of guesses based on difficulty
